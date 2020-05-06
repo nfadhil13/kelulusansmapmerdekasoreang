@@ -21,7 +21,7 @@ public class SiswaController {
 
     private static final String urlPrefix = "http://smaplusmerdekasoreang.sch.id/coba/";
 
-    @GetMapping(value = "/login")
+    @GetMapping(value = {"/","/login"})
     public String logInController(Siswa siswa, ModelMap params) {
         params.addAttribute("siswa",siswa);
         return"/pages/login";
