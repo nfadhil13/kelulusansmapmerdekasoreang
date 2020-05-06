@@ -24,7 +24,7 @@ public class SiswaController {
     @GetMapping(value = {"/","/login"})
     public String logInController(Siswa siswa, ModelMap params) {
         params.addAttribute("siswa",siswa);
-        return"/pages/login";
+        return"pages/login";
     }
 
     @PostMapping(value="/tryLogin")
