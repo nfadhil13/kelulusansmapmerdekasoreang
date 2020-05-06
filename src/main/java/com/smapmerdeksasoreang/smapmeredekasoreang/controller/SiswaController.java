@@ -33,7 +33,7 @@ public class SiswaController {
         Optional<Siswa> siswaOptional =siswaService.getSiswaByNis(siswa.getNis());
         if (siswaOptional.isPresent()) {
             if (siswa.getPassword().equals(siswaOptional.get().getPassword())) {
-                return "redirect:/redirect/" + siswa.getPdfLink();
+                return "redirect:/redirect/" + siswaOptional.get().getPdfLink();
             } else {
                 redirectAttributes.addFlashAttribute("notAvailable", "Password Tidak Sesuai ");
                 return "redirect:/login";
