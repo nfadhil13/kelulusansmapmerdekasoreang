@@ -38,6 +38,7 @@
 <body class="text-center">
 <form class="form-signin" th:action="@{/tryLogin}" th:method="post" th:object="${siswa}" action="/tryLogin" method="post">
     <div class="alert alert-danger" th:if="${notAvailable} != null" th:text="${notAvailable}"></div>
+    <img class="mb-4" src="http://smaplusmerdekasoreang.sch.id/coba/favlogo.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="username" class="sr-only">Username</label>
     <input th:field="*{nis}"type="text" id="username" class="form-control" placeholder="Username" required>
